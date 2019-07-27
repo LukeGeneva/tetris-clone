@@ -1,19 +1,13 @@
 import { TILE_SIZE } from './constants';
 
-interface Block {
-  x: number;
-  y: number;
-  color: string;
-}
-
-class Block implements IDrawable {
-  constructor(color: string) {
+class Block {
+  constructor(color) {
     this.x = 0;
     this.y = 0;
     this.color = color;
   }
 
-  draw(context: CanvasRenderingContext2D) {
+  draw(context) {
     context.fillStyle = this.color;
     context.strokeStyle = 'black';
     context.fillRect(
